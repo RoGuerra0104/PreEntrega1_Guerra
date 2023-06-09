@@ -9,15 +9,18 @@ const cafe = (tipo, tamaño) => {
         case "capuchino":
             console.log("Este tipo de café lo encontraremos con alrededor de un tercio de café, siendo el resto leche");
             break;
+        case "frappé":
+            console.log("Este tipo de café................................");
+            break;
         default:
             console.log("Ingrese un tipo de café valido");
     }
 
-    if (tipo == "expreso") {
+    if (tipo == "expreso"  || tipo == "frappé") {
         tamaño= prompt("Ingrese un tipo de tamaño")
     }
 
-    while (tipo == "expreso") {
+    while (tipo == "expreso" || tipo == "frappé") {
     if (tamaño == "60") {
         console.log("Para su preparación coloque una cucharada de café para una taza de 60 ml")
         break;
@@ -34,3 +37,5 @@ const cafe = (tipo, tamaño) => {
     }
 }
 }
+
+cafe(prompt("ingrese un tipo de café")); 
